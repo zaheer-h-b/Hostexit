@@ -6,7 +6,7 @@ const LeaveList = () => {
 
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/leaves');
+      const res = await axios.get('https://hostexit.onrender.com/api/leaves');
       setLeaves(res.data);
     } catch (err) {
       console.error('Failed to fetch leaves:', err);
@@ -19,7 +19,7 @@ const LeaveList = () => {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/leaves/${id}`, { status: newStatus });
+      await axios.put(`https://hostexit.onrender.com/api/leaves/${id}`, { status: newStatus });
       fetchLeaves(); 
     } catch (error) {
       console.error('Error updating leave status:', error);

@@ -11,7 +11,7 @@ const StudentLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/students/login', {
+      const res = await axios.post('https://hostexit.onrender.com/api/students/login', {
         emailOrPhone,
         password,
       });

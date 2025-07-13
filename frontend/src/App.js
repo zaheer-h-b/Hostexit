@@ -7,7 +7,7 @@ import StudentLogin from './components/StudentLogin';
 import StudentDashboard from './components/StudentDashboard';
 import ApplyLeave from './components/ApplyLeave';
 import AdminLogin from './components/AdminLogin';
-import ProtectedRoute from './components/ProtectedRoute'; // ✅ Add this
+import ProtectedRoute from './components/ProtectedRoute'; 
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,7 +20,6 @@ function App() {
           <Route path="/" element={<RoleSelect />} />
           <Route path="/admin-login" element={<AdminLogin />} />
 
-          {/* ✅ Wrap protected admin routes */}
           <Route path="/admin" element={<ProtectedRoute><AdminPanel /></ProtectedRoute>} />
           <Route path="/admin/register-student" element={<ProtectedRoute><RegisterStudent /></ProtectedRoute>} />
           <Route path="/admin/students" element={<ProtectedRoute><StudentList /></ProtectedRoute>} />
