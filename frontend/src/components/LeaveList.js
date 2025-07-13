@@ -6,7 +6,7 @@ const LeaveList = () => {
 
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get('https://hostexit.onrender.com/api/leaves');
+      const res = await axios.get('http://localhost:5000/api/leaves');
       setLeaves(res.data);
     } catch (err) {
       console.error('Failed to fetch leaves:', err);

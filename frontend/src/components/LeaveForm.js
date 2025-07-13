@@ -17,7 +17,7 @@ const LeaveForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://hostexit.onrender.com/api/leaves', formData);
+      const res = await axios.post('http://localhost:5000/api/leaves', formData);
       alert('Leave Applied!');
       setFormData({ name: '', rollNo: '', reason: '', fromDate: '', toDate: '' });
     } catch (err) {

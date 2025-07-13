@@ -18,7 +18,7 @@ const StudentForm = () => {
 
   const fetchMyLeaves = async (rollNo) => {
     try {
-      const res = await axios.get('https://hostexit.onrender.com/api/leaves');
+      const res = await axios.get('http://localhost:5000/api/leaves');
       const filtered = res.data.filter(l => l.rollNo === rollNo);
       setMyLeaves(filtered);
     } catch (err) {
@@ -29,7 +29,7 @@ const StudentForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://hostexit.onrender.com/api/leaves', formData);
+      await axios.post('http://localhost:5000/api/leaves', formData);
       alert('Leave Applied');
       fetchMyLeaves(formData.rollNo); // refresh
       setFormData({ name: '', rollNo: '', reason: '', fromDate: '', toDate: '' });
