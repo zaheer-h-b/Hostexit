@@ -26,7 +26,7 @@ const ApplyLeave = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://hostexit.onrender.com/api/leaves', {
+      await axios.post('http://localhost:5000/api/leaves', {
         ...form,
         name: student.name,
         rollNo: student.rollNo,

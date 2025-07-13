@@ -11,14 +11,14 @@ const StudentLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://hostexit.onrender.com/api/students/login', {
+      const res = await axios.post('http://localhost:5000/api/students/login', {
         emailOrPhone,
         password,
       });
 
       if (res.data && res.data.student) {
         localStorage.setItem('student', JSON.stringify(res.data.student));
-        toast.success('Login successful 🎉'); 
+        toast.success('Login successful'); 
         navigate('/student/dashboard');
       } else {
         toast.error('Login failed: Invalid response from server ');
