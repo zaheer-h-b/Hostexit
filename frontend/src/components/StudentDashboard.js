@@ -20,7 +20,7 @@ const StudentDashboard = () => {
   useEffect(() => {
     const fetchLeaves = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/leaves');
+        const res = await axios.get('https://hostexit.onrender.com/api/leaves');
         const studentLeaves = res.data.filter((l) => l.rollNo === student?.rollNo);
         setLeaves(studentLeaves);
       } catch (error) {

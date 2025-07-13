@@ -34,7 +34,7 @@ const ApplyLeave = () => {
       toast.success('Leave request submitted successfully! 🎉');
       navigate('/student/dashboard');
     } catch (error) {
-      toast.error('Error submitting leave request. ❌');
+      toast.error('Error submitting leave request. ');
     }
   };
 
