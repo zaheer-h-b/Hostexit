@@ -57,7 +57,7 @@ const LeaveList = () => {
                     <button onClick={() => handleStatusChange(leave._id, 'Rejected')}>Reject</button>
                   </>
                 )}
-                {leave.status !== 'Pending' && <span>✔</span>}
+                {leave.status !== 'Pending' && <span></span>}
               </td>
             </tr>
           ))}

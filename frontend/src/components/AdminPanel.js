@@ -46,7 +46,7 @@ const AdminPanel = () => {
         </button>
       </div>
 
-     
+    
       <div className="flex justify-center gap-4 mb-10">
         <button
           onClick={() => navigate('/admin/register-student')}
@@ -62,7 +62,7 @@ const AdminPanel = () => {
         </button>
       </div>
 
-   
+  
       <div className="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow">
         <h3 className="text-xl font-semibold mb-4 text-gray-800">Leave Requests</h3>
         <div className="overflow-x-auto">
