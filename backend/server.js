@@ -3,7 +3,6 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const mongoose = require('mongoose');
-const path = require('path'); // <-- Add this
 
 dotenv.config();
 connectDB();
@@ -35,18 +34,9 @@ app.get('/ping', async (req, res) => {
   }
 });
 
-// Serve React frontend
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'frontend/build'))); // <-- path to your React build
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-  });
-} else {
-  app.get('/', (req, res) => {
-    res.send('API is running...');
-  });
-}
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 
 // Start server
 const PORT = process.env.PORT || 5000;
