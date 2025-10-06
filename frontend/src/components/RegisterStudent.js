@@ -17,7 +17,7 @@ const RegisterStudent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://hostexit.onrender.com/api/students/register', formData);
+      await axios.post('https://hostexit-1.onrender.com/api/students/register', formData);
       toast.success('Student registered successfully!');
       navigate('/admin');
     } catch (error) {

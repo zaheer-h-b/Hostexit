@@ -5,7 +5,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    axios.get('https://hostexit.onrender.com/api/students').then((res) => setStudents(res.data));
+    axios.get('https://hostexit-1.onrender.com/api/students').then((res) => setStudents(res.data));
   }, []);
 
   return (
