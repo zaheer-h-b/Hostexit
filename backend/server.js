@@ -10,11 +10,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://leave-b.onrender.com/'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: "https://frontend-bb.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-
 app.use(express.json());
 
 // Routes
