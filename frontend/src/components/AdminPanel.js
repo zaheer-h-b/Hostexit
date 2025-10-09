@@ -8,7 +8,7 @@ const AdminPanel = () => {
 
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get('https://hostexit-1.onrender.com/api/leaves');
+      const res = await axios.get('https://leave-b.onrender.com/api/leaves');
       setLeaves(res.data);
     } catch (err) {
       console.error('Error fetching leaves:', err);
@@ -17,7 +17,7 @@ const AdminPanel = () => {
 
   const handleUpdateStatus = async (id, status) => {
     try {
-      await axios.put(`https://hostexit-1.onrender.com/api/leaves/${id}`, { status });
+      await axios.put(`https://leave-b.onrender.com/api/leaves/${id}`, { status });
       fetchLeaves();
     } catch (err) {
       console.error('Error updating status:', err);
